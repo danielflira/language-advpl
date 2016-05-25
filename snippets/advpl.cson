@@ -1,0 +1,44 @@
+'.source.advpl':
+
+  'function':
+    'prefix': 'function'
+    'body': '''
+    User Function ${1:name} (${2:parameters})
+      ${3:code}
+    Return
+
+    $0
+    '''
+
+  'if':
+    'prefix': 'if'
+    'body': '''
+    If ${1:condition}
+      ${2:code}
+    EndIf
+    $0
+    '''
+
+  'define':
+    'prefix': 'define'
+    'body': '#DEFINE "${1:header}"\r\n$0'
+
+  'DbUseArea':
+    'prefix': '_dbusearea'
+    'body': 'DbUseArea(${1:/*lNovaWorkarea*/}, ${2:/*TOPCONN*/}, ${3:/*TCGenQry\(,,cQuery\)*/}, ${4:/*cAlias*/}, ${5:/*lCompartilhado*/}, ${6:/*lSomenteLeitura*/})\r\n$0'
+
+  'true':
+    'prefix': 't'
+    'body': '.T.${0}'
+
+  'false':
+    'prefix': 'f'
+    'body': '.F..${0}'
+
+  'nil':
+    'prefix': 'nil'
+    'body': 'Nil.${0}'
+
+  'null':
+    'prefix': 'null'
+    'body': 'Nil.${0}'

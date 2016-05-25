@@ -1,0 +1,21 @@
+{
+  "name": "language-advpl",
+  "version": "0.0.1",
+  "description": "AdvPL highlighting support in Atom",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "homepage": "http://github.com/danielflira/language-advpl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielflira/language-advpl.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielflira/language-advpl/issues"
+  },
+  "devDependencies": {
+    "coffeelint": "^1.10.1"
+  }
+}

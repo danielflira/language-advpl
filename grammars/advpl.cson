@@ -1,0 +1,79 @@
+'scopeName': 'source.advpl'
+'name': 'AdvPL'
+'fileTypes': [
+  'prw',
+  'prx',
+  'ch'
+]
+'patterns': [
+  {
+    'match': '\\b(?i:(private|local|default)\\s*(\\w+))\\b'
+    'captures':
+      '1':
+        'name': 'storage.type.modifier.advpl'
+      '2':
+        'name': 'variable.other.advpl'
+  }
+  {
+    'match': '\\b(?i:(if|for|while|enddo|endif|next|endif|else|elseif|return))\\b'
+    'name': 'keyword.control.advpl'
+  }
+  {
+    'begin': '"'
+    'end': '"'
+    'name': 'string.quoted.double.advpl'
+  }
+  {
+    'begin': '\''
+    'end': '\''
+    'name': 'string.quoted.single.advpl'
+  }
+  {
+    'match': '\\b(\\d+|\\d+.\\d+)\\b'
+    'name': 'constant.number.advpl'
+  }
+  {
+    'match': '(?i:(nil|\\.t\\.|\\.f\\.|\\.and\\.|\\.or\\.|!))'
+    'name': 'constant.language.advpl'
+  }
+  {
+    'begin': '(?i:(.*function))\\s+(\\w+)\\s*\\('
+    'beginCaptures':
+      '1':
+        'name': 'storage.type.function.advpl'
+      '2':
+        'name': 'entity.name.function.advpl'
+    'contentName': 'meta.function.parameters.advpl'
+    'end': '\\)'
+  }
+  {
+    'begin': '(\\w+)\\('
+    'beginCaptures':
+      '1':
+        'name': 'entity.name.function.advpl'
+    'contentName': 'meta.function.parameters.advpl'
+    'end': '(\\))'
+  }
+  {
+    'begin': '/\\*'
+    'end': '\\*/'
+    'contentName': 'comment.block.advpl'
+  }
+  {
+    'match': '\\s+//.*'
+    'name': 'comment.line.double-slash.advpl'
+  }
+  {
+    'begin': '(\\w*)(\\[)'
+    'beginCaptures':
+      '1':
+        'name': 'variable.other.advpl'
+      '2':
+        'name': 'keyword.other.advpl'
+    'end': '(\\])'
+    'endCaptures':
+      '1':
+        'name': 'keyword.other.advpl'
+    'contentName': 'meta.function.parameters.advpl'
+  }
+]
