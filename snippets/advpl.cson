@@ -19,13 +19,25 @@
     $0
     '''
 
-  'define':
-    'prefix': 'define'
-    'body': '#DEFINE "${1:header}"\r\n$0'
+  'include':
+    'prefix': 'include'
+    'body': '#INCLUDE "${1:header}"\r\n$0'
 
-  'DbUseArea':
-    'prefix': '_dbusearea'
-    'body': 'DbUseArea(${1:/*lNovaWorkarea*/}, ${2:/*TOPCONN*/}, ${3:/*TCGenQry\(,,cQuery\)*/}, ${4:/*cAlias*/}, ${5:/*lCompartilhado*/}, ${6:/*lSomenteLeitura*/})\r\n$0'
+  'dbusearea_tab':
+    'prefix': '_dbusearea_tab'
+    'body': 'DbUseArea(${1:/*lNovaWorkarea*/}, ${2:/*cDriver*/}, ${3:/*cTabela*/}, ${4:/*cAlias*/}, ${5:/*lCompartilhado*/}, ${6:/*lSomenteLeitura*/})\r\n$0'
+
+  'dbusearea_sql':
+    'prefix': '_dbusearea_sql'
+    'body': 'DbUseArea(${1:/*lNovaWorkarea*/}, ${2:"TOPCONN"}, TCGenQry\\(,,${3:/*cQuery*/}\\), ${4:/*cAlias*/}, ${5:/*lCompartilhado*/}, ${6:/*lSomenteLeitura*/})\r\n$0'
+
+  'dbusearea_tab':
+    'prefix': 'dbusearea_tab'
+    'body': 'DbUseArea(.T., "TOPCONN", ${1:/*cArquivo*/}, ${2:/*cAlias*/}, .T., .F.)\r\n$0'
+
+  'dbusearea_sql':
+    'prefix': 'dbusearea_sql'
+    'body': 'DbUseArea(.T., "TOPCONN", TCGenQry\\(,,${1:/*cQuery*/}\\), ${2:/*cAlias*/}, .T., .F.)\r\n$0'
 
   'true':
     'prefix': 't'
@@ -42,3 +54,10 @@
   'null':
     'prefix': 'null'
     'body': 'Nil.${0}'
+
+  'define':
+    'prefix': 'define'
+    'body': '''
+    #DEFINE ${1:name} ${2:value}
+    $0
+    '''

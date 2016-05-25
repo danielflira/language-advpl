@@ -76,4 +76,16 @@
         'name': 'keyword.other.advpl'
     'contentName': 'meta.function.parameters.advpl'
   }
+  {
+    'match': '\\s*(?i:#include)'
+    'name': 'support.function.uopz.advpl'
+  }
+  {
+    'match': '\\s*(?i:(#define))\\s+(\\w+)\\s+'
+    'captures':
+      '1':
+        'name': 'support.function.uopz.advpl'
+      '2':
+        'name': 'variable.other.advpl'
+  }
 ]
