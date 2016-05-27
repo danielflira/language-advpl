@@ -3,6 +3,19 @@ AdvPL sintaxe highlighting
 Faz marcao da sintaxe do AdvPL. Adiciona alguns snippets para AdvPL. Tudo para o
 editor Atom
 
+**v0.0.3**
+
+_highlight:_
+- ajustes gerais
+
+_snippets:_
+- ifelse   : estrutura if com else
+- elseif   : estrutura com apenas o elseif
+- for      : estrutura para for
+- while    : estrutura para while
+- headers  : adiciona alguns headers automaticamente (rwmake, topconn, protheus)
+
+
 **v0.0.2**
 
 _highlight:_

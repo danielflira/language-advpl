@@ -61,3 +61,60 @@
     #DEFINE ${1:name} ${2:value}
     $0
     '''
+
+  'ifelse':
+    'prefix': 'ifelse'
+    'body': '''
+    If ${1:condition}
+      ${2:code}
+    Else
+      ${3:code}
+    EndIf
+    $0
+    '''
+
+  'elseif':
+    'prefix': 'elseif'
+    'body': '''
+    ElseIf ${1:condition}
+      ${2:code}
+    '''
+
+  'for':
+    'prefix': 'for'
+    'body': '''
+    For ${1:variable} := ${2:value} To ${3:target}
+      ${4:code}
+    Next ${1:variable}
+    $0
+    '''
+
+  'while':
+    'prefix': 'while'
+    'body': '''
+    While ${1:condition}
+      ${2:code}
+    EndDo
+    $0
+    '''
+
+  'rwmake':
+    'prefix': 'rwmake'
+    'body': '''
+    #DEFINE "RWMAKE.CH"
+    $0
+    '''
+
+  'topconn':
+    'prefix': 'topconn'
+    'body': '''
+    #DEFINE "TOPCONN.CH"
+    $0
+    '''
+
+  'protheus':
+    'prefix': 'protheus'
+    'body': '''
+    #DEFINE "PROTHEUS.CH"
+    $0
+    '''
