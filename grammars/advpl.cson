@@ -19,16 +19,6 @@
     'name': 'keyword.control.advpl'
   }
   {
-    'begin': '"'
-    'end': '"'
-    'name': 'string.quoted.double.advpl'
-  }
-  {
-    'begin': '\''
-    'end': '\''
-    'name': 'string.quoted.single.advpl'
-  }
-  {
     'match': '\\b(\\d+|\\d+.\\d+)\\b'
     'name': 'constant.number.advpl'
   }
@@ -47,20 +37,12 @@
     'end': '\\)'
   }
   {
-    'begin': '(\\w+)\\('
-    'beginCaptures':
-      '1':
-        'name': 'entity.name.function.advpl'
-    'contentName': 'meta.function.parameters.advpl'
-    'end': '(\\))'
-  }
-  {
     'begin': '/\\*'
     'end': '\\*/'
     'contentName': 'comment.block.advpl'
   }
   {
-    'match': '\\s+//.*'
+    'match': '\\s*//.*'
     'name': 'comment.line.double-slash.advpl'
   }
   {
@@ -75,6 +57,11 @@
       '1':
         'name': 'keyword.other.advpl'
     'contentName': 'meta.function.parameters.advpl'
+    'patterns': [
+      {
+        'include': '$self'
+      }
+    ]
   }
   {
     'match': '\\s*(?i:#include)'
@@ -87,5 +74,21 @@
         'name': 'support.function.uopz.advpl'
       '2':
         'name': 'variable.other.advpl'
+  }
+  {
+    'match': '(\\w+)\\('
+    'captures':
+      '1':
+        'name': 'entity.name.function.advpl'
+  }
+  {
+    'begin': '"'
+    'end': '"'
+    'name': 'string.quoted.double.advpl'
+  }
+  {
+    'begin': "'"
+    'end': "'"
+    'name': 'string.quoted.single.advpl'
   }
 ]
