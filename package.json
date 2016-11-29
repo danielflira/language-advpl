@@ -2,7 +2,7 @@
   "name": "language-advpl",
   "version": "0.0.3",
   "description": "AdvPL highlighting support in Atom",
-  "main": "advpl.coffee",
+  "main": "advpl.js",
   "engines": {
     "atom": "*",
     "node": "*"
@@ -22,6 +22,6 @@
   "apmInstallSource": {
     "type": "git",
     "source": "https://github.com/danielflira/language-advpl",
-    "sha": "1830e2ed4374c30408aca42c18d08b06ba65274d"
+    "sha": "c240b3f97ed1e8724a6d2fbd046ad1b6d8d9d0fe"
   }
 }
