@@ -3,6 +3,18 @@ AdvPL sintaxe highlighting
 Faz marcao da sintaxe do AdvPL. Adiciona alguns snippets para AdvPL. Tudo para o
 editor Atom
 
+Instala&ccedil;&atilde;o
+========================
+
+> Ir nas configura&ccedil;&otilde;es do atom, na &aacute;rea de instala&ccedil;&atilde;o informar o link do reposit&oacute;rio:
+> https://github.com/danielflira/language-advpl
+
+> apenas clicar em instalar.
+
+
+Hist&oacute;rico
+================
+
 **v0.0.3**
 
 _highlight:_
@@ -27,8 +39,8 @@ _snippets:_
 - \_dbusearea_sql: dbusearea para sql
 - dbusearea_sql:   dbusearea para sql (configurado)
 - dbusearea_tab:   dbusearea para tabelas (configurado)
-- define:          criacao de defines
-- include:         criacao de includes
+- define:          cria&ccedil;&atilde;o de defines
+- include:         cria&ccedil;&atilde;o de includes
 
 **v0.0.1**
 
